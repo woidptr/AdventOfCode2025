@@ -10,10 +10,13 @@ fn main() {
 
     match day {
         1 => {
-            println!("The answer to the puzzle of the first day (part 1) is: {}", days::day_01::compute());
+            let passwords = days::day_01::compute();
+            println!("The answer to the puzzle of the first day:");
+            println!("Part 1 (regular password): {}", passwords.without_protocol);
+            println!("Part 2 (password with protocol 0x434C49434B): {}", passwords.with_protocol);
         },
         2 => {
-            println!("The answer to the puzzle of the second day is: ");
+            println!("The answer to the puzzle of the second day:");
         },
         _ => println!("Not a possible day"),
     }
